@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<! -- All HTML documents must start with a document type declaration: !DOCTYPE html. -->
+
+<! -- The HTML document itself begins with html and ends with /html. -->
+
+<! The visible part of the HTML document is between body and /body. -->
+
+<html lang="en">
+  <head>
+    <title>Using app Webpage</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="http://chancejs.com/chance.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" type="text/css" href="mystile.css" />
+          
+  </head>
+  <body id = "body">
+    <script>
+      function auto_height(elem) {  /* javascript */
+                elem.style.height = "1px";
+                elem.style.height = (elem.scrollHeight)+"px";
+      }
+    </script>
+    <h1 style="color:Violet";>Using app Webpage</h1>
+    <p>Do you have any important links or notes to save for later?</p>
+    <p>Do you want to write your schedule anywhere and check it easily during the day?</p>
+    <p>Write all your notes here! It’s a funny way to organize your day and learn HTML and JavaScript! &#128540 </p>   
+    <div class="form-group" id = form-note>
+        <label for="note">Note:</label>
+        <textarea id = myTextArea rows="5" class="auto_height" oninput="auto_height(this)"></textarea>
+    </div>
+    <button id = "SaveNote" onclick="SaveNote()">Add Note.</button>
+    <div class="callout">
+      <div class="callout-header">Callout Header</div>
+      <span class="closebtn" onclick="this.parentElement.style.display='none';">×</span>
+      <div class="callout-container">
+      <p>Some text to describe the callout message. <a href="#">Learn more</a> or close it if it is in your way.</p>
+      </div>
+    </div>
+  <script src="index.js"></script>
+  </body>
+</html>
