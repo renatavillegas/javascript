@@ -21,7 +21,7 @@ function SaveNote(e) {
   var calloutHeader = document.createElement('div');
   calloutHeader.className= "callout-header"
   calloutHeader.id = title+'header'
-  var text = document.createTextNode("New note!")
+  var text = document.createTextNode(title)
   calloutHeader.appendChild(text) 
   callout.appendChild(calloutHeader)
   //create close butoon 
