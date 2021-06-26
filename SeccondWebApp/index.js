@@ -7,19 +7,20 @@ function AddNote(e) {
 
 
 function SaveNote(e) {
-  var note = document.getElementById('myTextArea').value;
-  window.alert(note);
+  var note = document.getElementById('myTextAreaNote').value;
+  var title = document.getElementById('myTextAreaTitle').value;
+  window.alert(title);
   //add callout
   // search father element
   var body = document.getElementById('body');
   // create callout
   var callout = document.createElement('div');
   callout.className = "callout"
-  callout.id = 'newNote'
+  callout.id = title
   //create callout-header
   var calloutHeader = document.createElement('div');
   calloutHeader.className= "callout-header"
-  calloutHeader.id = 'newNoteheader'
+  calloutHeader.id = title+'header'
   var text = document.createTextNode("New note!")
   calloutHeader.appendChild(text) 
   callout.appendChild(calloutHeader)
@@ -41,7 +42,7 @@ function SaveNote(e) {
   body.appendChild(callout);
   // listening events: 
   //Make the DIV element draggagle:
-  dragElement(document.getElementById("newNote"));
+  dragElement(document.getElementById(title));
 
 }
 function dragElement(elmnt) {

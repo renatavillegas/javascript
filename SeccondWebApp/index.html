@@ -26,9 +26,12 @@
     <p>Do you have any important links or notes to save for later?</p>
     <p>Do you want to write your schedule anywhere and check it easily during the day?</p>
     <p>Write all your notes here! It’s a funny way to organize your day and learn HTML and JavaScript! &#128540 </p>   
-    <div class="form-group" id = form-note>
+    <div class="mydiv" id = form-note>
+        <label for="note">Note Title:</label>
+        <textarea id = myTextAreaTitle rows="5" class="auto_height" oninput="auto_height(this)"></textarea>
+        <div></div>
         <label for="note">Note:</label>
-        <textarea id = myTextArea rows="5" class="auto_height" oninput="auto_height(this)"></textarea>
+        <textarea id = myTextAreaNote rows="5" class="auto_height" oninput="auto_height(this)"></textarea>
     </div>
     <button id = "SaveNote" onclick="SaveNote()">Add Note.</button>
     <div class="callout">
