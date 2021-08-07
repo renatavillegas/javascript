@@ -1,0 +1,12 @@
+-- UsingApp database 
+CREATE DATABASE notes_db; 
+USE notes_db;
+
+CREATE TABLE notes
+(
+	id INT  PRIMARY KEY AUTO_INCREMENT, 
+	positionX FLOAT NOT NULL DEFAULT 0.0, 
+	positionY FLOAT NOT NULL DEFAULT 0.0, 
+	title VARCHAR(255) NOT NULL, 
+	txt VARCHAR(255) NOT NULL
+); 
